@@ -1,0 +1,37 @@
+<ion-header>
+
+  <ion-navbar color="secondary">
+    <ion-title>ลงทะเบียน</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <form [formGroup]="signupForm" (submit)="signupUser()" novalidate>
+  <ion-item style="background-color: rgb(238, 180, 189);">
+    <ion-input formControlName="firstName" type="text" placeholder="First Name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input formControlName="lastName" type="text" placeholder="Last Name"></ion-input>
+  </ion-item>  
+  <ion-item>
+    <ion-input formControlName="email" type="email" placeholder="Email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input formControlName="password" type="password" placeholder="Password"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input formControlName="retype" type="password" placeholder="Confirm Password"></ion-input>
+  </ion-item>
+  <ion-grid>
+    <ion-row>
+      <ion-col style="text-align: center">
+        <button ion-button center-all type="submit" [disabled]="!signupForm.valid">สร้างบัญชีใช้งาน</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</form>
+
+</ion-content>
